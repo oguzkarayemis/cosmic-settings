@@ -13,21 +13,142 @@ desktop = Masaüstü
 appearance = Görünüm
     .desc = Ana renkler ve COSMIC temaları.
 
+accent-color = Ana renkler
+app-background = Uygulama veya pencele arka planı
+auto = Otomatik
+close = Kapalı
+color-picker = Renk Seçici
+copied-to-clipboard = Panoya kopyalanmış
+copy-to-clipboard = Panoya kopyala
+dark = Karanlık
+export = Dışa aktar
+hex = Hex
+import = İçe aktar
+light = Aydınlık
+mode-and-colors = Tarz ve Renkler
+recent-colors = En son renkler
+reset-default = Varsayılana döndür
+reset-to-default = Varsayılana döndür
+rgb = RGB
+window-hint-accent = Etkin pencere ipuçu rengi
+window-hint-accent-toggle = Tema ana rengini etkin pencere ipucu rengi olarak kullan
+
+auto-switch = Aydınlık tarzdan Karanlık tarza kendiliğinden geç
+    .desc = Gün doğumuyla Aydınlık tarza geçer
+
+container-background = Konteyner arka planı
+    .desc-detail = Konteyner arka plan rengi, gezinti kenar çubuğu, yan çekmece, diyaloglar ve benzer widget'lar için kullanılır. Varsayılan olarak, Uygulama veya pencere arka planından otomatik olarak türetilir.
+    .reset = Kendiliğindene döndür
+    .desc = Birincil konteyner rengi, gezinti kenar çubuğu, yan çekmece, diyaloglar ve benzer widget'lar için kullanılır.
+
+control-tint = Kontrol bileşeni renk tonu
+    .desc = Standart düğmelerin, arama girişlerinin, metin girişlerinin ve benzer bileşenlerin arka planları için kullanılır.
+
+frosted = Sistem arayüzünde buzlu cam etkisi
+    .desc = Panele, rıhtıma, uygulamalara, başlatıcıya ve uygulama kitaplığına arka plan bulanıklığı uygular.
+
+text-tint = Arayüz metin tonu
+    .desc = Çeşitli yüzeylerde yeterli karşıtlığa sahip arayüz metin renklerini türetmek için kullanılan renk.
+
+style = Stil
+    .round = Yuvarlak
+    .slightly-round = Hafif yuvarlak
+    .square = Dik
+
+# interface density left out for now
+window-management = Pencere Yönetimi
+    .active-hint = Etkin pencere ipuçu boyutu
+    .gaps = Döşenmiş pencereler etrafındaki boşluk
+
+## Desktop: Display
+
+-requires-restart = Yeniden başlatma gerektirir
+
+color = Renk
+    .depth = Renk derinliği
+    .profile = Renk profili
+    .sidebar = Renk Profilleri
+    .temperature = Renk sıcaklığı
+
+display = Ekranlar
+    .desc = Ekranları, ekran kartı geçişlerini ve gece ışığını yönet
+    .arrangement = Ekran Düzeni
+    .arrangement-desc = Yeniden düzenlemek için ekranları sürükle
+    .enable = Ekranı etkinleştir
+    .external = { $size } { $output } Dış Ekran
+    .laptop = { $size } Dizüstü Ekranı
+    .options = Ekran Seçenekleri
+    .refresh-rate = Yineleme hızı
+    .resolution = Çözünürlük
+    .scale = Ölçek
+
+graphics-mode = Ekran kartı modu
+    .mode = { $mode ->
+        [compute] Hesaplama
+        *[hybrid] Melez
+        [integrated] Tümleşik
+        [nvidia] NVIDIA
+    } graphics
+    .enable = Etkinleştir { $mode ->
+        [compute] hesaplama
+        *[hybrid] melez
+        [integrated] tümleşik
+        [nvidia] NVIDIA
+    } graphics
+    .desc = { $mode ->
+        [compute] Yalnızca hesaplama iş yükleri için ayrık ekran kartı kullanır. Harici ekranları devre dışı bırakır. { -requires-restart }.
+        *[hybrid] Açıkça ayrık ekran kartının kullanılması istenmediği sürece uygulamalar tümleşik ekran kartını kullanır. { -requires-restart }.
+        [integrated] Daha uzun pil ömrü ve daha az fan gürültüsü için ayrık ekran kartını kapatır.
+        [nvidia] Daha iyi grafik deneyimi ve en yüksek güç kullanımı. { -requires-restart }.
+    }
+    .restart = Yeniden başlat ve { $mode } moda geç?
+    .restart-desc = { $mode } moduna geçmek bütün açık uygulamaları kapatacak
+
+mirroring = Aynala
+    .id = Aynala { $id }
+    .dont = Aynalama
+    .mirror = Ayna { $display }
+    .project = Şunlara yansıt: { $display ->
+        [all] bütün ekranlar
+        *[other] { $display }
+    }
+    .project-count = { $count} sayıda diğer ekrana yansıtılıyor { $count ->
+        [1] ekrana
+        *[other] ekrana
+    }
+
+night-light = Gece Işığı
+.auto = Kendiliğinden (gün batımından gün doğumuna)
+    .desc = Daha sıcak renklerle mavi ışığı azalt.
+
+orientation = Yönelim
+    .landscape = Yatay
+    .landscape-flipped = Yatay (Tersyüz)
+    .portrait = Dikey
+    .portrait-flipped = Dikey (Tersyüz)
+
+scheduling = Zamanlama
+    .manual = Elle zamanla
+
 ## Desktop: Notifications
 
 notifications = Bildirimler
     .desc = Rahatsız Etme, kilit ekranı bildirimleri, ve uygulama başına ayarlar.
-
 
 ## Desktop: Options
 
 desktop-panel-options = Masaüstü ve Panel
     .desc = Logo Tuşu eylemi, hızlı köşeler, pencere kontrol seçenekleri.
 
+desktop-panels-and-applets = Masaüstü Paneller ve Uygulamacıklar
+
 super-key-action = Logo Tuşu Eylemi
     .launcher = Başlatıcı
     .workspaces = Çalışma Alanları
     .applications = Uygulamalar
+
+dock = Rıhtım
+    .desc = Sabitlenmiş uygulamalar ile panel.
 
 hot-corner = Hızlı Köşe
     .top-left-corner = Çalışma Alanları için sol-üst hızlı köşeyi etkinleştir
@@ -40,18 +161,13 @@ window-controls = Pencere Seçenekleri
     .minimize = Küçültme tuşunu göster
     .maximize = Büyültme tuşunu göster
 
-desktop-panels-and-applets = Masaüstü Panelleri ve Kabuk Bileşenleri
-
-
-dock = Görev Çubuğu
-    .desc = Sabitlenmiş uygulamaların bulunduğu panel.
-
 ## Desktop: Panel
+
 panel = Panel
     .desc = Masaüstü seçeneklerin ve menülerin bulunduğu üst panel.
 
 panel-behavior-and-position = Davranış ve Konumlar
-    .autohide = Otomatik olarak paneli gizle
+    .autohide = Paneli kendiliğinden gizle
     .position = Ekrandaki konum
     .display = Ekranda göster
 
